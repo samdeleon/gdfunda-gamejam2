@@ -170,7 +170,6 @@ GameObject:
   - component: {fileID: 8643922402729588006}
   - component: {fileID: 8643922402729588001}
   - component: {fileID: 8643922402729588000}
-  - component: {fileID: 8643922402729588003}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -229,10 +228,10 @@ MonoBehaviour:
   airMultiplier: 0.4
   fallMultiplier: 2.5
   lowJumpMultipler: 2
-  walkSpeed: 4
-  sprintSpeed: 10
+  walkSpeed: 5
+  sprintSpeed: 8
   acceleration: 50
-  jumpForce: 10
+  jumpForce: 8
   dashForce: 5
   dashAmount: 1
   jumpKey: 32
@@ -257,34 +256,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 41a990f132068334dadf254f76c7cf2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  wallRun: {fileID: 8643922402729588003}
+  wallRun: {fileID: 0}
   sensX: 150
   sensY: 150
   cam: {fileID: 8643922401977814574}
   orientation: {fileID: 8643922402949501663}
---- !u!114 &8643922402729588003
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8643922402729588012}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 02c4d4837e5dcbd4d96075834d433fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orientation: {fileID: 8643922402949501663}
-  wallDistance: 0.6
-  minimumJumpHeight: 1.5
-  wallRunGravity: 1
-  wallRunJumpForce: 6
-  cam: {fileID: 8643922401945934371}
-  fov: 90
-  wallRunfov: 100
-  wallRunfovTime: 10
-  camTilt: 10
-  camTiltTime: 10
 --- !u!1 &8643922402949501662
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,6 +371,20 @@ Transform:
   m_Father: {fileID: 8643922402729588013}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!64 &4133854347973978548
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8877730048039796168}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 0}
 --- !u!114 &8643922403340371063
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10728,20 +10718,6 @@ MonoBehaviour:
   m_SelectedFaces: 
   m_SelectedEdges: []
   m_SelectedVertices: 
---- !u!64 &4133854347973978548
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8877730048039796168}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 0}
 --- !u!1001 &8643922402334736537
 PrefabInstance:
   m_ObjectHideFlags: 0

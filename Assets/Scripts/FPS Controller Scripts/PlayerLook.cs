@@ -31,13 +31,24 @@ public class PlayerLook : MonoBehaviour
     {
         mouseX = Input.GetAxisRaw("Mouse X");
         mouseY = Input.GetAxisRaw("Mouse Y");
-         
+
         yRotation += mouseX * sensX * multiplier;
         xRotation -= mouseY * sensY * multiplier;
 
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
-
-        cam.transform.rotation = Quaternion.Euler(xRotation, yRotation, wallRun.tilt);
+        cam.transform.rotation = Quaternion.Euler(xRotation, yRotation, 0);
         orientation.transform.rotation = Quaternion.Euler(0, yRotation, 0);
+
+        if (wallRun != null)
+        {
+            TiltCamera();
+        }
+    }
+
+    private void TiltCamera()
+    {
+       
+        cam.transform.rotation = Quaternion.Euler(xRotation, yRotation, wallRun.tilt);
+       
     }
 }
