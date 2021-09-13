@@ -42,6 +42,7 @@ public class Interactor : MonoBehaviour
                         EventBroadcaster.Instance.PostEvent(EventNames.JabubuEvents.TREAT_FOUND);
 
                         interactable.OnInteract();
+                        GameController.instance.GetTreat();
                     }
                 }
             }
