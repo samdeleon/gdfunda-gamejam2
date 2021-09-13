@@ -83,6 +83,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
+        /*
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
 
         MyInput();
@@ -120,6 +121,54 @@ public class PlayerMovement : MonoBehaviour
 
         //ADJUST TO SLOPE
         slopeMoveDirection = Vector3.ProjectOnPlane(moveDirection, slopeHit.normal);
+        */
+        if (GameController.instance.gamePlaying)
+        {
+            isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+
+            MyInput();
+            ControlDrag();
+            ControlSpeed();
+            //IF JUMPING
+            if (rb.velocity.y < 0)
+            {
+                rb.velocity += Vector3.up * Physics.gravity.y * (fallMultiplier - 1) * Time.deltaTime;
+            }
+            else if (rb.velocity.y > 0 && !Input.GetButton("Jump"))
+            {
+                rb.velocity += Vector3.up * Physics.gravity.y * (lowJumpMultipler - 1) * Time.deltaTime;
+            }
+            //GROUNDCHECK
+            if (isGrounded)
+            {
+                ResetAmount();
+            }
+            //JUMP
+            if (Input.GetKeyDown(jumpKey) && isGrounded)
+            {
+                Jump();
+            }
+            //DASH
+            if (Input.GetKeyDown(dashKey) && !isGrounded)
+            {
+                Dash();
+            }
+            //ROTATION
+            if (moveDirection != Vector3.zero)
+            {
+                Quaternion toRotation = Quaternion.LookRotation(moveDirection, Vector3.up);
+                transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, rotationSpeed * Time.deltaTime);
+            }
+
+            //ADJUST TO SLOPE
+            slopeMoveDirection = Vector3.ProjectOnPlane(moveDirection, slopeHit.normal);
+        }
+
+        else
+        {
+            moveDirection = Vector3.zero;
+            slopeMoveDirection = Vector3.zero;
+        }
     }
 
     private void FixedUpdate()
