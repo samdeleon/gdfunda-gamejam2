@@ -13,11 +13,7 @@ public class UI_Controller : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start()
-    {
-        EventBroadcaster.Instance.AddObserver(EventNames.JabubuEvents.NOT_HOVER_TREAT, this.hideInteractPrompt);
-        EventBroadcaster.Instance.AddObserver(EventNames.JabubuEvents.ON_HOVER_TREAT, this.showInteractPrompt);
-        
+    void Start() 
 
     }
 
