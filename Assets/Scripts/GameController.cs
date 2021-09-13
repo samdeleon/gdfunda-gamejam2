@@ -26,7 +26,7 @@ public class GameController : MonoBehaviour
     {
         startTime = 120;
 
-        numTotalTreat = 1;
+        numTotalTreat = 10;
         numCurrentTreat = 0;
         treatCounter.text = "Found: 0 / " + numTotalTreat;
 
