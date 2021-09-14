@@ -36,6 +36,11 @@ public class GameController : MonoBehaviour
         gamePlaying = true;
         gameWin = false;
         EventBroadcaster.Instance.AddObserver(EventNames.JabubuEvents.RESTART, this.RestartLevel);
+        EventBroadcaster.Instance.AddObserver(EventNames.JabubuEvents.START_TIMER, this.StartTimer);
+    }
+
+    public void StartTimer(){
+        UIContainer.SetActive(true);
         StartCoroutine(Begin());
     }
 
