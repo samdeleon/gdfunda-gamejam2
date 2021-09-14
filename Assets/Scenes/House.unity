@@ -550,7 +550,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-64282
+  m_Name: pb_Mesh-80478
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6921,9 +6921,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 285476871}
     m_Modifications:
-    - target: {fileID: 7101419970556613731, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
-      propertyPath: m_IsActive
+    - target: {fileID: 621792916, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 621792916, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 621792916, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1928481672}
+    - target: {fileID: 621792916, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 621792916, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: MoveScene
+      objectReference: {fileID: 0}
+    - target: {fileID: 621792916, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UI_Controller, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 621792916, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: House
+      objectReference: {fileID: 0}
+    - target: {fileID: 621792916, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 1018935047, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: ExitGame
       objectReference: {fileID: 0}
     - target: {fileID: 7101419970891129419, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
       propertyPath: m_Name
@@ -20901,7 +20933,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh38104
+  m_Name: pb_Mesh60754
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29347,7 +29379,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh37944
+  m_Name: pb_Mesh60594
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -30722,6 +30754,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 79d412b1c73fbb44487cd094c182a9bb, type: 3}
   m_PrefabInstance: {fileID: 1907655996}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1928481672 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8053563392189838863, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+  m_PrefabInstance: {fileID: 708119498}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 525db2dc62ff84a4c8a13a2c379ab6f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1932526696 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100002, guid: 47af50246352ed14da4ade618d736175, type: 3}

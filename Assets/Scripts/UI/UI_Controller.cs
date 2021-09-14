@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class UI_Controller : MonoBehaviour
 {
@@ -26,6 +27,16 @@ public class UI_Controller : MonoBehaviour
     void Update()
     {
 
+    }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+
+    public void MoveScene(string name)
+    {
+        SceneManager.LoadScene(name);
     }
 
     // pressing START after viewing instructions panel
