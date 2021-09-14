@@ -20,13 +20,10 @@ public class UI_Controller : MonoBehaviour
 
 
     // Start is called before the first frame update
-    void Start() { 
+    void Start() {
+        
+        Pause();
 
-            Pause();
-        instructionsPanel.SetActive(true);
-
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
     }
 
     // Update is called once per frame
@@ -119,6 +116,11 @@ public class UI_Controller : MonoBehaviour
     public void Pause()
     {
         Time.timeScale = 0f;
+    }
+
+    public void RestartLevel()
+    {
+        EventBroadcaster.Instance.PostEvent(EventNames.JabubuEvents.RESTART);
     }
 
 }

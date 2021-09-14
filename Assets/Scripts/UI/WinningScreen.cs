@@ -11,7 +11,9 @@ public class WinningScreen : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+        SfxManager.sfxInstance.Audio.PlayOneShot(SfxManager.sfxInstance.Win);
     }
 
     // Update is called once per frame

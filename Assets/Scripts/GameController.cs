@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -34,6 +35,7 @@ public class GameController : MonoBehaviour
 
         gamePlaying = true;
         gameWin = false;
+        EventBroadcaster.Instance.AddObserver(EventNames.JabubuEvents.RESTART, this.RestartLevel);
         StartCoroutine(Begin());
     }
 
@@ -50,6 +52,28 @@ public class GameController : MonoBehaviour
         }
     }
 
+    private void RestartLevel()
+    {
+        startTime = 120;
+        inverseTime = 0;
+
+        numTotalTreat = 10;
+        numCurrentTreat = 0;
+        treatCounter.text = "Found: 0 / " + numTotalTreat;
+
+        gamePlaying = true;
+        gameWin = false;
+
+        string minutes = ((int)startTime / 60).ToString();
+        string seconds = (startTime % 60).ToString("f1");
+
+        timerText.text = minutes + ":" + seconds;
+    }
+
+    private void OnDestroy()
+    {
+        EventBroadcaster.Instance.RemoveAllObservers();
+    }
     public void GetTreat()
     {
         numCurrentTreat++;
@@ -72,13 +96,13 @@ public class GameController : MonoBehaviour
 
         }
         else
-            Invoke("ShowGameOverScreen", 1.25f);
+            SceneManager.LoadScene("LosingScreen");
     }
 
     private void EndGame()
     {
         gamePlaying = false;
-        Invoke("ShowGameFinishedScreen", 1.25f);
+        SceneManager.LoadScene("WinningScreen");
     }
 
     private void ShowGameFinishedScreen()

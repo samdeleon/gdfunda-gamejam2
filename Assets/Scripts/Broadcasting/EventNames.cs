@@ -41,6 +41,7 @@ public class EventNames {
 		public const string TOGGLE_MAP = "TOGGLE_MAP";
 		public const string TOGGLE_PAUSE = "TOGGLE_PAUSE";
 		public const string TOGGLE_MENU = "TOGGLE_MENU";
-		public const string ALL_TREAT_FOUND = "ALL_MAP_FOUND";
+		public const string ALL_TREAT_FOUND = "ALL_MAP_FOUND"; 
+		public const string RESTART = "RESTART";
 	}
 }
