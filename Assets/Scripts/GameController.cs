@@ -33,7 +33,7 @@ public class GameController : MonoBehaviour
     {
         inverseTime = 0;
 
-        numTotalTreat = 1;
+        numTotalTreat = 10;
         numCurrentTreat = 0;
         treatCounter.text = "Found: 0 / " + numTotalTreat;
 
@@ -117,7 +117,7 @@ public class GameController : MonoBehaviour
     }
     IEnumerator Begin()
     {
-        while (inverseTime < 10)
+        while (inverseTime < 120)
         {
             yield return new WaitForSeconds(1f);
             inverseTime++;
