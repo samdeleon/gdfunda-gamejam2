@@ -31249,7 +31249,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Audio: {fileID: 1754960130}
   Win: {fileID: 8300000, guid: c29fb4d83da8acd4f909f7864de6c106, type: 3}
-  Jump: {fileID: 8300000, guid: 5100eaec2a8e5e941be3cb77dc9d64e1, type: 3}
+  Jump: {fileID: 8300000, guid: 4002ab7e0e87ec943b575f94b7032869, type: 3}
   Dash: {fileID: 8300000, guid: 8d63de4cc757b074190eb0c647d0ad21, type: 3}
   Lose: {fileID: 8300000, guid: 61a0bdb52518b2a48aa757963eb1b0d7, type: 3}
   Eat: {fileID: 8300000, guid: e5af4e9ca0b649b4888ec751d7e63cf4, type: 3}
