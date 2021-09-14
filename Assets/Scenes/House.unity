@@ -7875,7 +7875,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 621792916, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 621792916, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 621792916, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -7890,12 +7894,20 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 621792916, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: RestartLevel
+      objectReference: {fileID: 0}
+    - target: {fileID: 621792916, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
       value: RestartLevel
       objectReference: {fileID: 0}
     - target: {fileID: 621792916, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: UI_Controller, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 621792916, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_StringArgument
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 621792916, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_StringArgument

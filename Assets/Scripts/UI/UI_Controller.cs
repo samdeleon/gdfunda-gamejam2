@@ -122,6 +122,7 @@ public class UI_Controller : MonoBehaviour
     public void RestartLevel()
     {
         EventBroadcaster.Instance.PostEvent(EventNames.JabubuEvents.RESTART);
+        SceneManager.LoadScene("House");
     }
 
 }
