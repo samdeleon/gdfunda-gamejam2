@@ -66,7 +66,8 @@ public class GameController : MonoBehaviour
 
         string minutes = ((int)startTime / 60).ToString();
         string seconds = (startTime % 60).ToString("f1");
-
+        print("Restarted Level");
+        
         timerText.text = minutes + ":" + seconds;
     }
 
