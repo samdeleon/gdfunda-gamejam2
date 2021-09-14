@@ -25,7 +25,7 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-        startTime = 10;
+        startTime = 120;
         inverseTime = 0;
 
         numTotalTreat = 10;
@@ -96,7 +96,7 @@ public class GameController : MonoBehaviour
     }
     IEnumerator Begin()
     {
-        while (inverseTime < 10)
+        while (inverseTime < 120)
         {
             yield return new WaitForSeconds(1f);
             inverseTime++;
