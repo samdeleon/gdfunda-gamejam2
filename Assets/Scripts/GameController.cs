@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System;
 
 public class GameController : MonoBehaviour
 {
     public static GameController instance;
 
     public GameObject Treat, UIContainer, gameFinishedPanel, gameOverPanel;
-    public Text treatCounter, timerText;
+    public Text treatCounter, timerText, timeCounter;
 
     private int numTotalTreat, numCurrentTreat, inverseTime;
     private float startTime;
@@ -17,7 +18,11 @@ public class GameController : MonoBehaviour
     public bool gamePlaying { get; private set; }
     private bool gameWin;
 
-    //TimeSpan timePlaying;
+    private float t;
+
+    private String savedTimeStr;
+
+    TimeSpan timePlaying;
 
     private void Awake()
     {
@@ -26,20 +31,21 @@ public class GameController : MonoBehaviour
 
     private void Start()
     {
-        startTime = 120;
         inverseTime = 0;
 
-        numTotalTreat = 10;
+        numTotalTreat = 1;
         numCurrentTreat = 0;
         treatCounter.text = "Found: 0 / " + numTotalTreat;
 
-        gamePlaying = true;
+        gamePlaying = false;
         gameWin = false;
-        EventBroadcaster.Instance.AddObserver(EventNames.JabubuEvents.RESTART, this.RestartLevel);
+
         EventBroadcaster.Instance.AddObserver(EventNames.JabubuEvents.START_TIMER, this.StartTimer);
     }
 
     public void StartTimer(){
+        gamePlaying = true;
+        startTime = Time.time;
         UIContainer.SetActive(true);
         StartCoroutine(Begin());
     }
@@ -48,32 +54,17 @@ public class GameController : MonoBehaviour
     {
         if (gamePlaying)
         {
-            float t = startTime - Time.time;
-
+            t = Time.time - startTime;
+            /*
             string minutes = ((int)t / 60).ToString();
             string seconds = (t % 60).ToString("f1");
-
-            timerText.text = minutes + ":" + seconds;
+            */
+            timePlaying = TimeSpan.FromSeconds(t);
+            String timePlayingStr = timePlaying.ToString("m':'ss'.'f");
+            //timerText.text = minutes + ":" + seconds;
+            timerText.text = timePlayingStr;
+            savedTimeStr = timePlayingStr;
         }
-    }
-
-    private void RestartLevel()
-    {
-        startTime = 120;
-        inverseTime = 0;
-
-        numTotalTreat = 10;
-        numCurrentTreat = 0;
-        treatCounter.text = "Found: 0 / " + numTotalTreat;
-
-        gamePlaying = true;
-        gameWin = false;
-
-        string minutes = ((int)startTime / 60).ToString();
-        string seconds = (startTime % 60).ToString("f1");
-        print("Restarted Level");
-        
-        timerText.text = minutes + ":" + seconds;
     }
 
     private void OnDestroy()
@@ -126,12 +117,17 @@ public class GameController : MonoBehaviour
     }
     IEnumerator Begin()
     {
-        while (inverseTime < 120)
+        while (inverseTime < 10)
         {
             yield return new WaitForSeconds(1f);
             inverseTime++;
         }
         gamePlaying = false;
         LostGame();
+    }
+    public String TookTime()
+    {
+        Debug.Log(savedTimeStr);
+        return savedTimeStr;
     }
 }

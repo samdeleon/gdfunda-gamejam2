@@ -2,11 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class WinningScreen : MonoBehaviour
 {
 
     [SerializeField] public GameObject creditsPanel;
+    [SerializeField] public GameObject Time;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +40,11 @@ public class WinningScreen : MonoBehaviour
 
     public void CloseCredits() {
         creditsPanel.SetActive(false);
+    }
+
+    public void ShowTime()
+    {
+        Time.transform.Find("FinishtedTime").GetComponent<Text>().text = GameController.instance.TookTime();
     }
 
 
