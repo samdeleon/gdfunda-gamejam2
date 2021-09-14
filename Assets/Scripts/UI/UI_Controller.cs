@@ -82,8 +82,9 @@ public class UI_Controller : MonoBehaviour
 
 
             Resume();
-        // TODO - should show the in-game panel here 
-        // inGamePanel.SetActive(true);
+            
+        
+        EventBroadcaster.Instance.PostEvent(EventNames.JabubuEvents.START_TIMER);
     }
 
     public void Awake()

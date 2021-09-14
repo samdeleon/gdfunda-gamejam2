@@ -43,5 +43,7 @@ public class EventNames {
 		public const string TOGGLE_MENU = "TOGGLE_MENU";
 		public const string ALL_TREAT_FOUND = "ALL_MAP_FOUND"; 
 		public const string RESTART = "RESTART";
+		public const string START_TIMER = "START_TIMER";
+
 	}
 }
