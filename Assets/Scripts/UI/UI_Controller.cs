@@ -15,18 +15,55 @@ public class UI_Controller : MonoBehaviour
     [SerializeField] public GameObject instructionsPanel;
     [SerializeField] public GameObject pausedPanel;
 
-    //public int treatsFound = 0;
+    public static bool isPaused;
+    public static bool menuToggled;
 
 
     // Start is called before the first frame update
     void Start() { 
+
+            Pause();
         instructionsPanel.SetActive(true);
+
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            menuToggled = !menuToggled;
 
+            EventBroadcaster.Instance.PostEvent(EventNames.JabubuEvents.TOGGLE_MENU);
+            this.togglePause();
+        }
+    }
+
+    // PAUSE CODE
+    private void togglePause()
+    {
+        if (isPaused)
+        {   
+            Resume();
+
+            Cursor.lockState = CursorLockMode.Locked;
+            Cursor.visible = false;
+
+            pausedPanel.SetActive(false);
+        }
+        else
+        {
+            Pause();
+
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
+
+            pausedPanel.SetActive(true);
+        }
+
+        isPaused = !isPaused;
     }
 
     public void ExitGame()
@@ -43,6 +80,11 @@ public class UI_Controller : MonoBehaviour
     public void yesInstructions() { 
         instructionsPanel.SetActive(false);
 
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
+
+
+            Resume();
         // TODO - should show the in-game panel here 
         // inGamePanel.SetActive(true);
     }

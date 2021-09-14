@@ -550,7 +550,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-80478
+  m_Name: pb_Mesh-2540
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6921,6 +6921,52 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 285476871}
     m_Modifications:
+    - target: {fileID: 115950099, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 115950099, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 115950099, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 115950099, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 115950099, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 230
+      objectReference: {fileID: 0}
+    - target: {fileID: 115950099, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 95.729996
+      objectReference: {fileID: 0}
+    - target: {fileID: 115950099, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 115950099, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 115950099, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 115950100, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_Text
+      value: "The timer is still running even when paused!\n\nKeyboard Commands:\nWASD
+        \t\t\t\t- Movement\nSpace Bar\t\t- Jumping\nE\t\t\t\t\t\t- Picking up the
+        Treat\t\nESC\t\t\t\t\t- Pausing / Unpausing Game\n"
+      objectReference: {fileID: 0}
+    - target: {fileID: 335753653, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 621792916, guid: 45cf837986befe04ea138e7afc0fecf8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
       value: 1
@@ -20933,7 +20979,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh60754
+  m_Name: pb_Mesh16916
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29379,7 +29425,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh60594
+  m_Name: pb_Mesh16756
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
